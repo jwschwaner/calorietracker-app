@@ -7,6 +7,8 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import { useColorScheme } from '@/src/components/useColorScheme';
+import { SafeAreaProvider } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -42,7 +44,13 @@ export default function RootLayout() {
     return null;
   }
 
-  return <RootLayoutNav />;
+  return (
+      <SafeAreaProvider>
+        <SafeAreaView style={{ flex: 1 }} edges={['top']}>
+          <RootLayoutNav />
+        </SafeAreaView>
+      </SafeAreaProvider>
+  );
 }
 
 function RootLayoutNav() {
