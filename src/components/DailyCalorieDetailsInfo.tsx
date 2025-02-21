@@ -10,7 +10,7 @@ export const DailyCaloriesDetailsInfo: React.FC<DailyCaloriesDetailsInfoProps> =
     const { dailyGoal, dailyTotal, date } = dailyDetails;
 
     // Optionally format the date (React Native doesn't have built-in date-fns, so do minimal approach).
-    const dateString = date.toDateString(); // e.g. "Tue Aug 22 2023"
+    const dateString = date.toString(); // e.g. "Tue Aug 22 2023"
 
     return (
         <View style={styles.container}>
