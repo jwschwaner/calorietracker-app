@@ -48,6 +48,7 @@ export const IngredientSearchAutoComplete: React.FC<Props> = ({ onSelectIngredie
             {searchText.length > 0 && results.length > 0 && (
                 <FlatList
                     style={styles.suggestionsList}
+                    nestedScrollEnabled={true}
                     data={results}
                     keyExtractor={(item) => item.name}
                     renderItem={({ item }) => (
