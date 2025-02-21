@@ -24,6 +24,7 @@ export class UserDataModel {
     weight: number; // in kilograms
     activityLevel: ActivityLevel;
     goal: Goal;
+    currentDailyCalorieGoal?: number;
 
     constructor(
         gender: Gender,
